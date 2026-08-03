@@ -59,6 +59,7 @@ models/*
 # Reports / figures / metrics outputs
 reports/figures/*
 !reports/figures/.gitkeep
+!reports/figures/*.png
 reports/metrics/*
 !reports/metrics/.gitkeep
 !reports/metrics/*.json
