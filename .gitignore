@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data protection (IMMUTABLE and sensitive patient-level data)
+data/raw/*
+!data/raw/.gitkeep
+data/validated/*
+!data/validated/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Models & Large Artifacts
+models/*
+!models/.gitkeep
+
+# Reports / figures / metrics outputs
+reports/figures/*
+!reports/figures/.gitkeep
+reports/metrics/*
+!reports/metrics/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db
