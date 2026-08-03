@@ -55,6 +55,7 @@ data/processed/*
 models/*
 !models/.gitkeep
 !models/final_mortality_model.joblib
+!models/preprocessing_pipeline.joblib
 
 # Reports / figures / metrics outputs
 reports/figures/*
