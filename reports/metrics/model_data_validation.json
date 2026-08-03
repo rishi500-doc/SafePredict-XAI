@@ -1,0 +1,445 @@
+{
+  "status": "PASSED",
+  "total_rows": 1403,
+  "unique_stays": 1403,
+  "is_one_row_per_stay": true,
+  "target_balance": {
+    "alive_count": 1281,
+    "expired_count": 122,
+    "mortality_prevalence_pct": 8.7
+  },
+  "leakage_columns_found": 0,
+  "total_features": 138,
+  "clinical_features_count": 111,
+  "quality_features_count": 27,
+  "missingness_summary": {
+    "age_numeric": {
+      "null_count": 2,
+      "null_pct": 0.14
+    },
+    "age_gt89": {
+      "null_count": 2,
+      "null_pct": 0.14
+    },
+    "admissionheight": {
+      "null_count": 25,
+      "null_pct": 1.78
+    },
+    "admissionweight": {
+      "null_count": 24,
+      "null_pct": 1.71
+    },
+    "heartrate_mean": {
+      "null_count": 47,
+      "null_pct": 3.35
+    },
+    "heartrate_min": {
+      "null_count": 47,
+      "null_pct": 3.35
+    },
+    "heartrate_max": {
+      "null_count": 47,
+      "null_pct": 3.35
+    },
+    "heartrate_std": {
+      "null_count": 47,
+      "null_pct": 3.35
+    },
+    "sao2_mean": {
+      "null_count": 54,
+      "null_pct": 3.85
+    },
+    "sao2_min": {
+      "null_count": 54,
+      "null_pct": 3.85
+    },
+    "sao2_max": {
+      "null_count": 54,
+      "null_pct": 3.85
+    },
+    "sao2_std": {
+      "null_count": 56,
+      "null_pct": 3.99
+    },
+    "respiration_mean": {
+      "null_count": 155,
+      "null_pct": 11.05
+    },
+    "respiration_min": {
+      "null_count": 155,
+      "null_pct": 11.05
+    },
+    "respiration_max": {
+      "null_count": 155,
+      "null_pct": 11.05
+    },
+    "respiration_std": {
+      "null_count": 157,
+      "null_pct": 11.19
+    },
+    "temperature_mean": {
+      "null_count": 1293,
+      "null_pct": 92.16
+    },
+    "temperature_min": {
+      "null_count": 1293,
+      "null_pct": 92.16
+    },
+    "temperature_max": {
+      "null_count": 1293,
+      "null_pct": 92.16
+    },
+    "temperature_std": {
+      "null_count": 1293,
+      "null_pct": 92.16
+    },
+    "systemicsystolic_mean": {
+      "null_count": 1148,
+      "null_pct": 81.82
+    },
+    "systemicsystolic_min": {
+      "null_count": 1148,
+      "null_pct": 81.82
+    },
+    "systemicsystolic_max": {
+      "null_count": 1148,
+      "null_pct": 81.82
+    },
+    "systemicsystolic_std": {
+      "null_count": 1151,
+      "null_pct": 82.04
+    },
+    "systemicdiastolic_mean": {
+      "null_count": 1149,
+      "null_pct": 81.9
+    },
+    "systemicdiastolic_min": {
+      "null_count": 1149,
+      "null_pct": 81.9
+    },
+    "systemicdiastolic_max": {
+      "null_count": 1149,
+      "null_pct": 81.9
+    },
+    "systemicdiastolic_std": {
+      "null_count": 1150,
+      "null_pct": 81.97
+    },
+    "systemicmean_mean": {
+      "null_count": 1148,
+      "null_pct": 81.82
+    },
+    "systemicmean_min": {
+      "null_count": 1148,
+      "null_pct": 81.82
+    },
+    "systemicmean_max": {
+      "null_count": 1148,
+      "null_pct": 81.82
+    },
+    "systemicmean_std": {
+      "null_count": 1151,
+      "null_pct": 82.04
+    },
+    "creatinine_first": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "creatinine_last": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "creatinine_min": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "creatinine_max": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "creatinine_mean": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "bun_first": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "bun_last": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "bun_min": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "bun_max": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "bun_mean": {
+      "null_count": 133,
+      "null_pct": 9.48
+    },
+    "sodium_first": {
+      "null_count": 129,
+      "null_pct": 9.19
+    },
+    "sodium_last": {
+      "null_count": 129,
+      "null_pct": 9.19
+    },
+    "sodium_min": {
+      "null_count": 129,
+      "null_pct": 9.19
+    },
+    "sodium_max": {
+      "null_count": 129,
+      "null_pct": 9.19
+    },
+    "sodium_mean": {
+      "null_count": 129,
+      "null_pct": 9.19
+    },
+    "potassium_first": {
+      "null_count": 145,
+      "null_pct": 10.33
+    },
+    "potassium_last": {
+      "null_count": 145,
+      "null_pct": 10.33
+    },
+    "potassium_min": {
+      "null_count": 145,
+      "null_pct": 10.33
+    },
+    "potassium_max": {
+      "null_count": 145,
+      "null_pct": 10.33
+    },
+    "potassium_mean": {
+      "null_count": 145,
+      "null_pct": 10.33
+    },
+    "glucose_first": {
+      "null_count": 144,
+      "null_pct": 10.26
+    },
+    "glucose_last": {
+      "null_count": 144,
+      "null_pct": 10.26
+    },
+    "glucose_min": {
+      "null_count": 144,
+      "null_pct": 10.26
+    },
+    "glucose_max": {
+      "null_count": 144,
+      "null_pct": 10.26
+    },
+    "glucose_mean": {
+      "null_count": 144,
+      "null_pct": 10.26
+    },
+    "hgb_first": {
+      "null_count": 202,
+      "null_pct": 14.4
+    },
+    "hgb_last": {
+      "null_count": 202,
+      "null_pct": 14.4
+    },
+    "hgb_min": {
+      "null_count": 202,
+      "null_pct": 14.4
+    },
+    "hgb_max": {
+      "null_count": 202,
+      "null_pct": 14.4
+    },
+    "hgb_mean": {
+      "null_count": 202,
+      "null_pct": 14.4
+    },
+    "hct_first": {
+      "null_count": 179,
+      "null_pct": 12.76
+    },
+    "hct_last": {
+      "null_count": 179,
+      "null_pct": 12.76
+    },
+    "hct_min": {
+      "null_count": 179,
+      "null_pct": 12.76
+    },
+    "hct_max": {
+      "null_count": 179,
+      "null_pct": 12.76
+    },
+    "hct_mean": {
+      "null_count": 179,
+      "null_pct": 12.76
+    },
+    "wbc_first": {
+      "null_count": 206,
+      "null_pct": 14.68
+    },
+    "wbc_last": {
+      "null_count": 206,
+      "null_pct": 14.68
+    },
+    "wbc_min": {
+      "null_count": 206,
+      "null_pct": 14.68
+    },
+    "wbc_max": {
+      "null_count": 206,
+      "null_pct": 14.68
+    },
+    "wbc_mean": {
+      "null_count": 206,
+      "null_pct": 14.68
+    },
+    "platelets_first": {
+      "null_count": 228,
+      "null_pct": 16.25
+    },
+    "platelets_last": {
+      "null_count": 228,
+      "null_pct": 16.25
+    },
+    "platelets_min": {
+      "null_count": 228,
+      "null_pct": 16.25
+    },
+    "platelets_max": {
+      "null_count": 228,
+      "null_pct": 16.25
+    },
+    "platelets_mean": {
+      "null_count": 228,
+      "null_pct": 16.25
+    },
+    "bicarbonate_first": {
+      "null_count": 226,
+      "null_pct": 16.11
+    },
+    "bicarbonate_last": {
+      "null_count": 226,
+      "null_pct": 16.11
+    },
+    "bicarbonate_min": {
+      "null_count": 226,
+      "null_pct": 16.11
+    },
+    "bicarbonate_max": {
+      "null_count": 226,
+      "null_pct": 16.11
+    },
+    "bicarbonate_mean": {
+      "null_count": 226,
+      "null_pct": 16.11
+    },
+    "chloride_first": {
+      "null_count": 154,
+      "null_pct": 10.98
+    },
+    "chloride_last": {
+      "null_count": 154,
+      "null_pct": 10.98
+    },
+    "chloride_min": {
+      "null_count": 154,
+      "null_pct": 10.98
+    },
+    "chloride_max": {
+      "null_count": 154,
+      "null_pct": 10.98
+    },
+    "chloride_mean": {
+      "null_count": 154,
+      "null_pct": 10.98
+    },
+    "calcium_first": {
+      "null_count": 182,
+      "null_pct": 12.97
+    },
+    "calcium_last": {
+      "null_count": 182,
+      "null_pct": 12.97
+    },
+    "calcium_min": {
+      "null_count": 182,
+      "null_pct": 12.97
+    },
+    "calcium_max": {
+      "null_count": 182,
+      "null_pct": 12.97
+    },
+    "calcium_mean": {
+      "null_count": 182,
+      "null_pct": 12.97
+    },
+    "magnesium_first": {
+      "null_count": 663,
+      "null_pct": 47.26
+    },
+    "magnesium_last": {
+      "null_count": 663,
+      "null_pct": 47.26
+    },
+    "magnesium_min": {
+      "null_count": 663,
+      "null_pct": 47.26
+    },
+    "magnesium_max": {
+      "null_count": 663,
+      "null_pct": 47.26
+    },
+    "magnesium_mean": {
+      "null_count": 663,
+      "null_pct": 47.26
+    },
+    "lactate_first": {
+      "null_count": 1079,
+      "null_pct": 76.91
+    },
+    "lactate_last": {
+      "null_count": 1079,
+      "null_pct": 76.91
+    },
+    "lactate_min": {
+      "null_count": 1079,
+      "null_pct": 76.91
+    },
+    "lactate_max": {
+      "null_count": 1079,
+      "null_pct": 76.91
+    },
+    "lactate_mean": {
+      "null_count": 1079,
+      "null_pct": 76.91
+    },
+    "ph_first": {
+      "null_count": 958,
+      "null_pct": 68.28
+    },
+    "ph_last": {
+      "null_count": 958,
+      "null_pct": 68.28
+    },
+    "ph_min": {
+      "null_count": 958,
+      "null_pct": 68.28
+    },
+    "ph_max": {
+      "null_count": 958,
+      "null_pct": 68.28
+    },
+    "ph_mean": {
+      "null_count": 958,
+      "null_pct": 68.28
+    }
+  }
+}

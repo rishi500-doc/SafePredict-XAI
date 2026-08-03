@@ -45,18 +45,23 @@ data/raw/*
 !data/raw/.gitkeep
 data/validated/*
 !data/validated/.gitkeep
+!data/validated/encounter_quality_flags.parquet
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/model_data.parquet
+!data/processed/cohort_patient.parquet
 
 # Models & Large Artifacts
 models/*
 !models/.gitkeep
+!models/final_mortality_model.joblib
 
 # Reports / figures / metrics outputs
 reports/figures/*
 !reports/figures/.gitkeep
 reports/metrics/*
 !reports/metrics/.gitkeep
+!reports/metrics/*.json
 
 # OS generated files
 .DS_Store

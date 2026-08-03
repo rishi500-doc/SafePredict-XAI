@@ -1,0 +1,271 @@
+{
+  "pipeline_phase": "Phase 3 - Data Cleaning & Cohort Construction",
+  "cohort_flow": {
+    "step_0_raw_stays": {
+      "count": 2520,
+      "expired": 212,
+      "alive": 2280,
+      "missing": 28
+    },
+    "step_1_known_outcome": {
+      "initial_stays": 2520,
+      "excluded_unknown_target": 28,
+      "excluded_unknown_pct": 1.1111111111111112,
+      "retained_known_stays": 2492,
+      "alive_count": 2280,
+      "expired_count": 212,
+      "mortality_prevalence_pct": 8.507223113964688
+    },
+    "step_2_index_icu_stay": {
+      "strategy": "unitvisitnumber",
+      "initial_stays": 2492,
+      "repeat_stays_removed": 398,
+      "repeat_stays_removed_pct": 15.971107544141253,
+      "remaining_index_stays": 2094,
+      "retained_expired_count": 177,
+      "retained_mortality_pct": 8.45272206303725,
+      "removed_expired_count": 35,
+      "removed_mortality_pct": 8.793969849246231
+    },
+    "step_3_24h_landmark": {
+      "landmark_timepoint_minutes": 1440,
+      "initial_stays": 2094,
+      "short_stays_ending_before_24h": 691,
+      "short_stays_pct": 32.999044890162374,
+      "short_stay_outcomes": {
+        "hospital_expired": 55,
+        "hospital_alive": 636,
+        "hospital_mortality_pct": 7.959479015918958,
+        "unit_expired_in_first_24h": 39
+      },
+      "landmark_eligible_stays": 1403,
+      "landmark_eligible_pct": 67.00095510983763,
+      "eligible_cohort_outcomes": {
+        "hospital_expired": 122,
+        "hospital_alive": 1281,
+        "mortality_prevalence_pct": 8.695652173913043
+      },
+      "leakage_safeguard_warning": "unitdischargeoffset and unitdischargestatus are ground-truth event markers. They are strictly excluded from predictive feature matrices."
+    },
+    "step_4_final_analytical_cohort": {
+      "total_patients": 1403,
+      "alive_count": 1281,
+      "expired_count": 122,
+      "mortality_prevalence_pct": 8.695652173913043
+    }
+  },
+  "data_availability": {
+    "vital_records_24h": 375584,
+    "vital_patients_covered": 1364,
+    "vital_patient_coverage_pct": 97.22024233784748,
+    "lab_records_24h": 65866,
+    "lab_patients_covered": 1382,
+    "lab_patient_coverage_pct": 98.5032074126871
+  },
+  "measurement_cleaning_audit": {
+    "window_start_minutes": 0,
+    "window_end_minutes": 1440,
+    "cohort_stays_total": 1403,
+    "vital_24h": {
+      "total_records": 375584,
+      "unique_stays_with_vitals": 1364,
+      "patient_coverage_pct": 97.22024233784748,
+      "cleaning_audit": {
+        "heartrate": {
+          "plausibility_bounds": [
+            20.0,
+            250.0
+          ],
+          "clinical_source": "AHA/ACLS: <20 bpm severe bradycardia/lead off, >250 bpm extreme tachyarrhythmia",
+          "total_non_null": 373609,
+          "out_of_bounds_nullified": 50,
+          "out_of_bounds_pct": 0.013382975249525574,
+          "negative_artifacts_nullified": 0
+        },
+        "sao2": {
+          "plausibility_bounds": [
+            50.0,
+            100.0
+          ],
+          "clinical_source": "West's Respiratory Physiology: >100% physically impossible; <50% profound hypoxemia/probe artifact",
+          "total_non_null": 337463,
+          "out_of_bounds_nullified": 678,
+          "out_of_bounds_pct": 0.20091091467805358,
+          "negative_artifacts_nullified": 0
+        },
+        "respiration": {
+          "plausibility_bounds": [
+            4.0,
+            70.0
+          ],
+          "clinical_source": "Marino's ICU Book: <4 bpm severe apnea/hypoventilation; >70 bpm motion artifact",
+          "total_non_null": 331414,
+          "out_of_bounds_nullified": 2881,
+          "out_of_bounds_pct": 0.869305460843537,
+          "negative_artifacts_nullified": 0
+        },
+        "temperature": {
+          "plausibility_bounds": [
+            28.0,
+            43.0
+          ],
+          "clinical_source": "Emergency Medicine Guidelines: <28\u00b0C profound hypothermia; >43\u00b0C fatal hyperthermia",
+          "total_non_null": 24391,
+          "out_of_bounds_nullified": 894,
+          "out_of_bounds_pct": 3.6652863761223404,
+          "negative_artifacts_nullified": 0
+        },
+        "systemicsystolic": {
+          "plausibility_bounds": [
+            30.0,
+            300.0
+          ],
+          "clinical_source": "Arterial Line Guidelines: Negative/zero values indicate zeroing artifact; >300 mmHg line fling",
+          "total_non_null": 54518,
+          "out_of_bounds_nullified": 243,
+          "out_of_bounds_pct": 0.44572434792178733,
+          "negative_artifacts_nullified": 6
+        },
+        "systemicdiastolic": {
+          "plausibility_bounds": [
+            10.0,
+            200.0
+          ],
+          "clinical_source": "Arterial Line Guidelines: Negative values indicate damping artifact; must be lower than systolic",
+          "total_non_null": 54518,
+          "out_of_bounds_nullified": 201,
+          "out_of_bounds_pct": 0.36868557173777466,
+          "negative_artifacts_nullified": 9
+        },
+        "systemicmean": {
+          "plausibility_bounds": [
+            20.0,
+            250.0
+          ],
+          "clinical_source": "Surviving Sepsis Guidelines: MAP <20 mmHg indicates line artifact/circulatory arrest; >250 mmHg severe artifact",
+          "total_non_null": 54984,
+          "out_of_bounds_nullified": 199,
+          "out_of_bounds_pct": 0.36192346864542413,
+          "negative_artifacts_nullified": 43
+        }
+      }
+    },
+    "lab_24h": {
+      "total_records": 65866,
+      "unique_stays_with_labs": 1382,
+      "patient_coverage_pct": 98.5032074126871,
+      "cleaning_audit": {
+        "bedside glucose": {
+          "plausibility_bounds": [
+            10.0,
+            1500.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Severe hypoglycemia (<10 mg/dL) to extreme DKA/HHS (>1500 mg/dL)",
+          "total_measured": 4401,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "glucose": {
+          "plausibility_bounds": [
+            10.0,
+            1500.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Severe hypoglycemia to extreme DKA/HHS",
+          "total_measured": 2140,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "potassium": {
+          "plausibility_bounds": [
+            1.0,
+            10.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: <1.0 mmol/L severe hypokalemia; >10.0 mmol/L severe hyperkalemia/hemolysis",
+          "total_measured": 2415,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "sodium": {
+          "plausibility_bounds": [
+            100.0,
+            180.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: <100 mmol/L profound hyponatremia; >180 mmol/L severe hypernatremia",
+          "total_measured": 2274,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "chloride": {
+          "plausibility_bounds": [
+            60.0,
+            150.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Severe hypochloremia to extreme hyperchloremia",
+          "total_measured": 2075,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "creatinine": {
+          "plausibility_bounds": [
+            0.1,
+            30.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Standard serum range to end-stage renal failure/anuria",
+          "total_measured": 2075,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "BUN": {
+          "plausibility_bounds": [
+            1.0,
+            250.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Severe uremia upper boundary",
+          "total_measured": 2072,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "Hgb": {
+          "plausibility_bounds": [
+            2.0,
+            25.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Profound anemia (<2 g/dL) to severe polycythemia (>25 g/dL)",
+          "total_measured": 2019,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "Hct": {
+          "plausibility_bounds": [
+            5.0,
+            75.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Profound anemia to extreme hemoconcentration",
+          "total_measured": 1936,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        },
+        "WBC x 1000": {
+          "plausibility_bounds": [
+            0.1,
+            200.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Severe leukopenia (<0.1 K/uL) to leukemoid reaction / leukemia (>200 K/uL)",
+          "total_measured": 1658,
+          "out_of_bounds_nullified": 1,
+          "out_of_bounds_pct": 0.060313630880579006
+        },
+        "platelets x 1000": {
+          "plausibility_bounds": [
+            1.0,
+            2000.0
+          ],
+          "clinical_source": "Tietz Clinical Chem: Severe thrombocytopenia (<1 K/uL) to extreme thrombocytosis (>2000 K/uL)",
+          "total_measured": 1649,
+          "out_of_bounds_nullified": 0,
+          "out_of_bounds_pct": 0.0
+        }
+      }
+    }
+  }
+}

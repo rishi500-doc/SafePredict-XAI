@@ -1,0 +1,526 @@
+{
+  "pipeline_phase": "Phase 2 - Data Validation & Data Quality",
+  "schema_validation": {
+    "status": "PASS",
+    "patient": {
+      "total_columns": 29,
+      "required_columns_checked": [
+        "patientunitstayid",
+        "age",
+        "gender",
+        "hospitaldischargestatus"
+      ],
+      "missing_required_columns": [],
+      "passed": true
+    },
+    "lab": {
+      "total_columns": 10,
+      "required_columns_checked": [
+        "patientunitstayid",
+        "labresultoffset",
+        "labname",
+        "labresult"
+      ],
+      "missing_required_columns": [],
+      "passed": true
+    },
+    "vitalPeriodic": {
+      "total_columns": 19,
+      "required_columns_checked": [
+        "patientunitstayid",
+        "observationoffset"
+      ],
+      "missing_required_columns": [],
+      "passed": true
+    }
+  },
+  "identifier_validation": {
+    "missing_patientunitstayid": {
+      "patient": 0,
+      "lab": 0,
+      "vital": 0
+    },
+    "patient_primary_key_duplicates": 0,
+    "orphan_records": {
+      "lab_orphan_records": 0,
+      "vital_orphan_records": 0
+    },
+    "repeated_measurements": {
+      "repeated_lab_measurements": 2267,
+      "repeated_lab_pct": 0.5215570790963051,
+      "repeated_vital_timestamps": 2,
+      "repeated_vital_pct": 0.00012232715173459902,
+      "clinical_note": "Repeated lab and vital timestamps reflect simultaneous multi-channel telemetry or duplicate blood draw tube orders; they are not inherently corrupted records."
+    }
+  },
+  "target_validation": {
+    "target_column": "hospitaldischargestatus",
+    "total_encounters": 2520,
+    "counts": {
+      "Alive (0)": 2280,
+      "Expired (1)": 212,
+      "Missing / Unrecorded": 28,
+      "Other / Invalid": 0
+    },
+    "percentages": {
+      "Alive": 90.47619047619048,
+      "Expired": 8.412698412698413,
+      "Missing": 1.1111111111111112
+    },
+    "known_outcomes_total": 2492,
+    "mortality_prevalence_pct": 8.507223113964688,
+    "clinical_safeguard": "hospitaldischargestatus is the ground truth target; it must NEVER be included as a feature in any training matrix."
+  },
+  "temporal_validation": {
+    "primary_modeling_window_minutes": "0 to 1440 minutes (First 24 Hours of ICU admission)",
+    "lab_temporal_summary": {
+      "total_records": 434660,
+      "pre_icu_count": 97488,
+      "pre_icu_pct": 22.42856485528919,
+      "first_24h_count": 98870,
+      "first_24h_pct": 22.74651451709382,
+      "post_24h_count": 238302,
+      "post_24h_pct": 54.82492062761699
+    },
+    "vital_temporal_summary": {
+      "total_records": 1634960,
+      "pre_icu_count": 1650,
+      "pre_icu_pct": 0.10091990018104419,
+      "first_24h_count": 553846,
+      "first_24h_pct": 33.87520183980036,
+      "post_24h_count": 1079464,
+      "post_24h_pct": 66.02387826001859
+    }
+  },
+  "missingness_validation": {
+    "patient_missingness": {
+      "patientunitstayid": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "patienthealthsystemstayid": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "gender": {
+        "null_count": 4,
+        "missing_pct": 0.15873015873015872
+      },
+      "age": {
+        "null_count": 4,
+        "missing_pct": 0.15873015873015872
+      },
+      "ethnicity": {
+        "null_count": 39,
+        "missing_pct": 1.5476190476190477
+      },
+      "hospitalid": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "wardid": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "apacheadmissiondx": {
+        "null_count": 299,
+        "missing_pct": 11.865079365079364
+      },
+      "admissionheight": {
+        "null_count": 69,
+        "missing_pct": 2.738095238095238
+      },
+      "hospitaladmittime24": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "hospitaladmitoffset": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "hospitaladmitsource": {
+        "null_count": 594,
+        "missing_pct": 23.57142857142857
+      },
+      "hospitaldischargeyear": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "hospitaldischargetime24": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "hospitaldischargeoffset": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "hospitaldischargelocation": {
+        "null_count": 32,
+        "missing_pct": 1.2698412698412698
+      },
+      "hospitaldischargestatus": {
+        "null_count": 28,
+        "missing_pct": 1.1111111111111112
+      },
+      "unittype": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "unitadmittime24": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "unitadmitsource": {
+        "null_count": 22,
+        "missing_pct": 0.873015873015873
+      },
+      "unitvisitnumber": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "unitstaytype": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "admissionweight": {
+        "null_count": 198,
+        "missing_pct": 7.857142857142857
+      },
+      "dischargeweight": {
+        "null_count": 1284,
+        "missing_pct": 50.95238095238095
+      },
+      "unitdischargetime24": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "unitdischargeoffset": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      },
+      "unitdischargelocation": {
+        "null_count": 4,
+        "missing_pct": 0.15873015873015872
+      },
+      "unitdischargestatus": {
+        "null_count": 2,
+        "missing_pct": 0.07936507936507936
+      },
+      "uniquepid": {
+        "null_count": 0,
+        "missing_pct": 0.0
+      }
+    },
+    "vital_missingness": {
+      "heartrate": {
+        "null_count": 7066,
+        "missing_pct": 0.43218182707833835
+      },
+      "sao2": {
+        "null_count": 193260,
+        "missing_pct": 11.820472672114303
+      },
+      "respiration": {
+        "null_count": 253609,
+        "missing_pct": 15.51163331212996
+      },
+      "temperature": {
+        "null_count": 1522140,
+        "missing_pct": 93.09952537065126
+      },
+      "systemicsystolic": {
+        "null_count": 1408485,
+        "missing_pct": 86.14797915545334
+      },
+      "systemicdiastolic": {
+        "null_count": 1408489,
+        "missing_pct": 86.14822380975681
+      },
+      "systemicmean": {
+        "null_count": 1406560,
+        "missing_pct": 86.0302392719088
+      }
+    },
+    "lab_missingness": {
+      "bedside glucose": {
+        "total_ordered": 29965,
+        "null_result_count": 65,
+        "missing_pct": 0.21691973969631237
+      },
+      "glucose": {
+        "total_ordered": 14983,
+        "null_result_count": 3,
+        "missing_pct": 0.02002269238470266
+      },
+      "potassium": {
+        "total_ordered": 16337,
+        "null_result_count": 2,
+        "missing_pct": 0.012242149721491093
+      },
+      "sodium": {
+        "total_ordered": 15414,
+        "null_result_count": 0,
+        "missing_pct": 0.0
+      },
+      "chloride": {
+        "total_ordered": 14655,
+        "null_result_count": 5,
+        "missing_pct": 0.0341180484476288
+      },
+      "creatinine": {
+        "total_ordered": 14631,
+        "null_result_count": 28,
+        "missing_pct": 0.1913744788462853
+      },
+      "BUN": {
+        "total_ordered": 14563,
+        "null_result_count": 21,
+        "missing_pct": 0.14420105747442147
+      },
+      "Hgb": {
+        "total_ordered": 14389,
+        "null_result_count": 2,
+        "missing_pct": 0.013899506567516854
+      },
+      "Hct": {
+        "total_ordered": 14042,
+        "null_result_count": 9,
+        "missing_pct": 0.06409343398376299
+      },
+      "WBC x 1000": {
+        "total_ordered": 12680,
+        "null_result_count": 3,
+        "missing_pct": 0.02365930599369085
+      },
+      "platelets x 1000": {
+        "total_ordered": 12738,
+        "null_result_count": 47,
+        "missing_pct": 0.3689747213063275
+      }
+    },
+    "clinical_note": "Informative missingness in vitals (e.g. 86% missing arterial blood pressures, 93% missing periodic temperature) represents clinical practice variations; complete-case deletion is strictly avoided."
+  },
+  "clinical_plausibility": {
+    "vital_plausibility": {
+      "heartrate": {
+        "plausibility_range": [
+          20.0,
+          250.0
+        ],
+        "clinical_source": "AHA/ACLS: <20 bpm (severe bradycardia/peri-arrest/lead off), >250 bpm (extreme SVT/VT/artifact)",
+        "total_non_null": 1627894,
+        "negative_count": 0,
+        "out_of_bounds_count": 370,
+        "out_of_bounds_pct": 0.02272875260919937
+      },
+      "sao2": {
+        "plausibility_range": [
+          50.0,
+          100.0
+        ],
+        "clinical_source": "West's Respiratory Physiology: >100% physically impossible; <50% severe hypoxemia/probe displacement",
+        "total_non_null": 1441700,
+        "negative_count": 0,
+        "out_of_bounds_count": 1985,
+        "out_of_bounds_pct": 0.13768467781091767
+      },
+      "respiration": {
+        "plausibility_range": [
+          4.0,
+          70.0
+        ],
+        "clinical_source": "Marino's ICU Book: <4 bpm indicates severe apnea/hypoventilation; >70 bpm indicates extreme tachypnea or motion artifact",
+        "total_non_null": 1381351,
+        "negative_count": 0,
+        "out_of_bounds_count": 13647,
+        "out_of_bounds_pct": 0.9879458588005511
+      },
+      "temperature": {
+        "plausibility_range": [
+          28.0,
+          43.0
+        ],
+        "clinical_source": "Emergency Medicine Guidelines: <28\u00b0C (profound hypothermia) or >43\u00b0C (fatal hyperthermia/probe error)",
+        "total_non_null": 112820,
+        "negative_count": 0,
+        "out_of_bounds_count": 3087,
+        "out_of_bounds_pct": 2.7362169828044673
+      },
+      "systemicsystolic": {
+        "plausibility_range": [
+          30.0,
+          300.0
+        ],
+        "clinical_source": "Arterial Line Guidelines: Negative/zero values indicate transducer calibration/zeroing artifact; >300 mmHg extreme hypertensive crisis/fling",
+        "total_non_null": 226475,
+        "negative_count": 36,
+        "out_of_bounds_count": 364,
+        "out_of_bounds_pct": 0.16072414173749863
+      },
+      "systemicdiastolic": {
+        "plausibility_range": [
+          10.0,
+          200.0
+        ],
+        "clinical_source": "Arterial Line Guidelines: Negative values indicate damping/zeroing artifact; must be physiologically lower than systolic",
+        "total_non_null": 226471,
+        "negative_count": 53,
+        "out_of_bounds_count": 379,
+        "out_of_bounds_pct": 0.16735034507729465
+      },
+      "systemicmean": {
+        "plausibility_range": [
+          20.0,
+          250.0
+        ],
+        "clinical_source": "Surviving Sepsis Guidelines: MAP <20 mmHg indicates profound circulatory collapse/line artifact; >250 mmHg severe artifact",
+        "total_non_null": 228400,
+        "negative_count": 104,
+        "out_of_bounds_count": 707,
+        "out_of_bounds_pct": 0.3095446584938704
+      }
+    },
+    "lab_plausibility": {
+      "bedside glucose": {
+        "plausibility_range": [
+          10.0,
+          1500.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Severe hypoglycemia (<10 mg/dL) to extreme DKA/HHS (>1500 mg/dL)",
+        "total_non_null": 29900,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      },
+      "glucose": {
+        "plausibility_range": [
+          10.0,
+          1500.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Severe hypoglycemia to extreme DKA/HHS",
+        "total_non_null": 14980,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      },
+      "potassium": {
+        "plausibility_range": [
+          1.0,
+          10.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: <1.0 mmol/L severe hypokalemia; >10.0 mmol/L severe hyperkalemia/hemolysis",
+        "total_non_null": 16335,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      },
+      "sodium": {
+        "plausibility_range": [
+          100.0,
+          180.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: <100 mmol/L profound hyponatremia; >180 mmol/L severe hypernatremia",
+        "total_non_null": 15414,
+        "negative_count": 0,
+        "out_of_bounds_count": 4,
+        "out_of_bounds_pct": 0.025950434669780722
+      },
+      "chloride": {
+        "plausibility_range": [
+          60.0,
+          150.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Severe hypochloremia to extreme hyperchloremia",
+        "total_non_null": 14650,
+        "negative_count": 0,
+        "out_of_bounds_count": 3,
+        "out_of_bounds_pct": 0.020477815699658702
+      },
+      "creatinine": {
+        "plausibility_range": [
+          0.1,
+          30.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Standard serum range to end-stage renal failure/anuria",
+        "total_non_null": 14603,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      },
+      "BUN": {
+        "plausibility_range": [
+          1.0,
+          250.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Severe uremia upper boundary",
+        "total_non_null": 14542,
+        "negative_count": 0,
+        "out_of_bounds_count": 1,
+        "out_of_bounds_pct": 0.006876633200385091
+      },
+      "Hgb": {
+        "plausibility_range": [
+          2.0,
+          25.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Profound anemia (<2 g/dL) to severe polycythemia (>25 g/dL)",
+        "total_non_null": 14387,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      },
+      "Hct": {
+        "plausibility_range": [
+          5.0,
+          75.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Profound anemia to extreme hemoconcentration",
+        "total_non_null": 14033,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      },
+      "WBC x 1000": {
+        "plausibility_range": [
+          0.1,
+          200.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Severe leukopenia (<0.1 K/uL) to leukemoid reaction / leukemia (>200 K/uL)",
+        "total_non_null": 12677,
+        "negative_count": 0,
+        "out_of_bounds_count": 8,
+        "out_of_bounds_pct": 0.06310641318924036
+      },
+      "platelets x 1000": {
+        "plausibility_range": [
+          1.0,
+          2000.0
+        ],
+        "clinical_source": "Tietz Clinical Chem: Severe thrombocytopenia (<1 K/uL) to extreme thrombocytosis (>2000 K/uL)",
+        "total_non_null": 12691,
+        "negative_count": 0,
+        "out_of_bounds_count": 0,
+        "out_of_bounds_pct": 0.0
+      }
+    }
+  },
+  "encounter_quality_summary": {
+    "total_encounters": 2520,
+    "flag_counts": {
+      "flag_missing_demographics": 40,
+      "flag_missing_target": 28,
+      "flag_missing_lab_data": 173,
+      "flag_missing_vital_data": 150,
+      "flag_temporal_issue": 65,
+      "flag_possible_invalid_value": 500
+    },
+    "flag_percentages": {
+      "flag_missing_demographics": 1.5873015873015872,
+      "flag_missing_target": 1.1111111111111112,
+      "flag_missing_lab_data": 6.865079365079366,
+      "flag_missing_vital_data": 5.952380952380952,
+      "flag_temporal_issue": 2.579365079365079,
+      "flag_possible_invalid_value": 19.841269841269842
+    }
+  }
+}

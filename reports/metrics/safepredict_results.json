@@ -1,0 +1,55 @@
+{
+  "phase": 8,
+  "description": "SafePredict Reliability Layer \u2014 ACCEPT / ABSTAIN decisions",
+  "abstain_notice": "ABSTAIN means the reliability criteria were not met. It does NOT mean the patient is safe or high-risk.",
+  "config": {
+    "n_bootstraps": 30,
+    "min_coverage_constraint": 0.6,
+    "uncertainty_threshold": 0.18788788843174287,
+    "dq_threshold": 0.45001287001287005,
+    "val_coverage": 0.6804511278195489,
+    "val_auroc_accepted": 0.80623973727422
+  },
+  "test_results": {
+    "model_only": {
+      "n_total": 291,
+      "n_accepted": 291,
+      "coverage": 1.0,
+      "abstention_rate": 0.0,
+      "error_rate_accepted": 0.07560137457044673,
+      "brier_accepted": 0.0659438755014626,
+      "auroc_accepted": 0.7472118959107807,
+      "pr_auc_accepted": 0.21988921393706165
+    },
+    "uncertainty_abstain": {
+      "n_total": 291,
+      "n_accepted": 228,
+      "coverage": 0.7835051546391752,
+      "abstention_rate": 0.21649484536082475,
+      "error_rate_accepted": 0.05263157894736842,
+      "brier_accepted": 0.04633861662767195,
+      "auroc_accepted": 0.7723765432098766,
+      "pr_auc_accepted": 0.239069702153868
+    },
+    "dq_abstain": {
+      "n_total": 291,
+      "n_accepted": 253,
+      "coverage": 0.8694158075601375,
+      "abstention_rate": 0.13058419243986252,
+      "error_rate_accepted": 0.08695652173913043,
+      "brier_accepted": 0.07458220161476897,
+      "auroc_accepted": 0.7646595828414011,
+      "pr_auc_accepted": 0.24633520224930083
+    },
+    "safepredict_combined": {
+      "n_total": 291,
+      "n_accepted": 195,
+      "coverage": 0.6701030927835051,
+      "abstention_rate": 0.3298969072164949,
+      "error_rate_accepted": 0.06153846153846154,
+      "brier_accepted": 0.05301208858121505,
+      "auroc_accepted": 0.7891621129326047,
+      "pr_auc_accepted": 0.26097927549431155
+    }
+  }
+}

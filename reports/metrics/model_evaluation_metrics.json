@@ -1,0 +1,636 @@
+{
+  "split_summary": {
+    "total_stays": 1403,
+    "total_unique_patients": 1242,
+    "feature_count": 138,
+    "numeric_feature_count": 134,
+    "categorical_feature_count": 4,
+    "train": {
+      "n_stays": 846,
+      "n_patients": 743,
+      "mortality_count": 85,
+      "mortality_rate": 0.10047281323877069
+    },
+    "validation": {
+      "n_stays": 266,
+      "n_patients": 250,
+      "mortality_count": 15,
+      "mortality_rate": 0.05639097744360902
+    },
+    "test": {
+      "n_stays": 291,
+      "n_patients": 249,
+      "mortality_count": 22,
+      "mortality_rate": 0.07560137457044673
+    },
+    "patient_overlap_check": {
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0,
+      "leakage_free": true
+    }
+  },
+  "models": {
+    "logistic_regression": {
+      "model_name": "Logistic Regression (L2, Balanced)",
+      "validation_metrics": {
+        "auroc": 0.7893758300132802,
+        "pr_auc": 0.24310825699696265,
+        "brier_score": 0.19060260198709367,
+        "default_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.15254237288135594,
+          "recall_sensitivity": 0.6,
+          "specificity": 0.8007968127490039,
+          "f1_score": 0.24324324324324326,
+          "confusion_matrix": {
+            "TN": 201,
+            "FP": 50,
+            "FN": 6,
+            "TP": 9
+          }
+        },
+        "optimal_youden": {
+          "threshold": 0.4306234967539038,
+          "precision": 0.11965811965811966,
+          "recall_sensitivity": 0.9333333333333333,
+          "specificity": 0.5896414342629482,
+          "f1_score": 0.21212121212121213,
+          "confusion_matrix": {
+            "TN": 148,
+            "FP": 103,
+            "FN": 1,
+            "TP": 14
+          }
+        },
+        "optimal_f1": {
+          "threshold": 0.5811992099368446,
+          "max_f1_score": 0.3243243243243243
+        }
+      },
+      "test_metrics": {
+        "auroc": 0.8499493071983778,
+        "pr_auc": 0.47970772501877806,
+        "brier_score": 0.19613556918541794,
+        "default_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.2,
+          "recall_sensitivity": 0.6818181818181818,
+          "specificity": 0.7769516728624535,
+          "f1_score": 0.30927835051546393,
+          "confusion_matrix": {
+            "TN": 209,
+            "FP": 60,
+            "FN": 7,
+            "TP": 15
+          }
+        },
+        "optimal_youden": {
+          "threshold": 0.4628814452754054,
+          "precision": 0.17699115044247787,
+          "recall_sensitivity": 0.9090909090909091,
+          "specificity": 0.654275092936803,
+          "f1_score": 0.2962962962962963,
+          "confusion_matrix": {
+            "TN": 176,
+            "FP": 93,
+            "FN": 2,
+            "TP": 20
+          }
+        },
+        "optimal_f1": {
+          "threshold": 0.6044664041518909,
+          "max_f1_score": 0.52
+        }
+      },
+      "hyperparameter_search": [
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 0.001,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.7893758300132802,
+          "val_pr_auc": 0.24310825699696265,
+          "val_brier": 0.19060260198709367,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.5896414342629482,
+          "val_f1": 0.21212121212121213
+        },
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 0.01,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.8050464807436919,
+          "val_pr_auc": 0.2387306367744124,
+          "val_brier": 0.1511609102674645,
+          "val_sensitivity": 0.8666666666666667,
+          "val_specificity": 0.6573705179282868,
+          "val_f1": 0.22807017543859648
+        },
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 0.05,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.7864541832669323,
+          "val_pr_auc": 0.1890603409233743,
+          "val_brier": 0.13622291346451593,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.6334661354581673,
+          "val_f1": 0.23140495867768596
+        },
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 0.1,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.7771580345285525,
+          "val_pr_auc": 0.16594083426922066,
+          "val_brier": 0.1311982930682135,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.6135458167330677,
+          "val_f1": 0.2222222222222222
+        },
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 0.5,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.7471447543160691,
+          "val_pr_auc": 0.14481401228469923,
+          "val_brier": 0.12442266341808024,
+          "val_sensitivity": 0.8666666666666667,
+          "val_specificity": 0.6693227091633466,
+          "val_f1": 0.23423423423423423
+        },
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 1.0,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.7272244355909694,
+          "val_pr_auc": 0.13888722749584467,
+          "val_brier": 0.12459976490188462,
+          "val_sensitivity": 0.8666666666666667,
+          "val_specificity": 0.5976095617529881,
+          "val_f1": 0.20155038759689922
+        },
+        {
+          "model": "Logistic Regression (Balanced)",
+          "params": {
+            "C": 10.0,
+            "class_weight": "balanced"
+          },
+          "val_auroc": 0.6703851261620186,
+          "val_pr_auc": 0.10680222108688422,
+          "val_brier": 0.13096376525338482,
+          "val_sensitivity": 0.8,
+          "val_specificity": 0.5537848605577689,
+          "val_f1": 0.17266187050359713
+        }
+      ]
+    },
+    "random_forest": {
+      "model_name": "Random Forest Classifier (Balanced)",
+      "validation_metrics": {
+        "auroc": 0.7930942895086321,
+        "pr_auc": 0.2146858293726805,
+        "brier_score": 0.05577257854752299,
+        "default_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall_sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "confusion_matrix": {
+            "TN": 251,
+            "FP": 0,
+            "FN": 15,
+            "TP": 0
+          }
+        },
+        "optimal_youden": {
+          "threshold": 0.23102559182755186,
+          "precision": 0.20930232558139536,
+          "recall_sensitivity": 0.6,
+          "specificity": 0.8645418326693227,
+          "f1_score": 0.3103448275862069,
+          "confusion_matrix": {
+            "TN": 217,
+            "FP": 34,
+            "FN": 6,
+            "TP": 9
+          }
+        },
+        "optimal_f1": {
+          "threshold": 0.2419121926215036,
+          "max_f1_score": 0.3333333333333333
+        }
+      },
+      "test_metrics": {
+        "auroc": 0.7754308888137885,
+        "pr_auc": 0.2719923385417879,
+        "brier_score": 0.07065811891660997,
+        "default_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall_sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "confusion_matrix": {
+            "TN": 269,
+            "FP": 0,
+            "FN": 22,
+            "TP": 0
+          }
+        },
+        "optimal_youden": {
+          "threshold": 0.1400155014465056,
+          "precision": 0.15384615384615385,
+          "recall_sensitivity": 0.9090909090909091,
+          "specificity": 0.5910780669144982,
+          "f1_score": 0.2631578947368421,
+          "confusion_matrix": {
+            "TN": 159,
+            "FP": 110,
+            "FN": 2,
+            "TP": 20
+          }
+        },
+        "optimal_f1": {
+          "threshold": 0.25317460086032834,
+          "max_f1_score": 0.27692307692307694
+        }
+      },
+      "hyperparameter_search": [
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 4,
+            "min_samples_split": 5
+          },
+          "val_auroc": 0.7426294820717132,
+          "val_pr_auc": 0.20184731228393527,
+          "val_brier": 0.11754635568602609,
+          "val_sensitivity": 0.6666666666666666,
+          "val_specificity": 0.7450199203187251,
+          "val_f1": 0.2247191011235955
+        },
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 4,
+            "min_samples_split": 5
+          },
+          "val_auroc": 0.749800796812749,
+          "val_pr_auc": 0.15896316695640672,
+          "val_brier": 0.12047113131688668,
+          "val_sensitivity": 0.7333333333333333,
+          "val_specificity": 0.6892430278884463,
+          "val_f1": 0.21153846153846154
+        },
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "min_samples_split": 5
+          },
+          "val_auroc": 0.7508632138114211,
+          "val_pr_auc": 0.16659811779825964,
+          "val_brier": 0.0832798893478698,
+          "val_sensitivity": 0.6666666666666666,
+          "val_specificity": 0.749003984063745,
+          "val_f1": 0.22727272727272727
+        },
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "min_samples_split": 10
+          },
+          "val_auroc": 0.7397078353253652,
+          "val_pr_auc": 0.15113227256828032,
+          "val_brier": 0.08729729635907557,
+          "val_sensitivity": 0.8,
+          "val_specificity": 0.5856573705179283,
+          "val_f1": 0.183206106870229
+        },
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 300,
+            "max_depth": 6,
+            "min_samples_split": 5
+          },
+          "val_auroc": 0.7559096945551129,
+          "val_pr_auc": 0.1618545455770167,
+          "val_brier": 0.08361866723529282,
+          "val_sensitivity": 0.6666666666666666,
+          "val_specificity": 0.7928286852589641,
+          "val_f1": 0.2597402597402597
+        },
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 8,
+            "min_samples_split": 5
+          },
+          "val_auroc": 0.7394422310756972,
+          "val_pr_auc": 0.16262574555838302,
+          "val_brier": 0.06495559071603313,
+          "val_sensitivity": 0.7333333333333333,
+          "val_specificity": 0.6812749003984063,
+          "val_f1": 0.20754716981132076
+        },
+        {
+          "model": "Random Forest (Balanced)",
+          "params": {
+            "n_estimators": 200,
+            "max_depth": null,
+            "min_samples_split": 10
+          },
+          "val_auroc": 0.7930942895086321,
+          "val_pr_auc": 0.2146858293726805,
+          "val_brier": 0.05577257854752299,
+          "val_sensitivity": 0.6,
+          "val_specificity": 0.8645418326693227,
+          "val_f1": 0.3103448275862069
+        }
+      ]
+    },
+    "xgboost": {
+      "model_name": "XGBoost Classifier (scale_pos_weight)",
+      "validation_metrics": {
+        "auroc": 0.7835325365205843,
+        "pr_auc": 0.1579266755944428,
+        "brier_score": 0.085616688807916,
+        "default_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.25,
+          "recall_sensitivity": 0.4,
+          "specificity": 0.9282868525896414,
+          "f1_score": 0.3076923076923077,
+          "confusion_matrix": {
+            "TN": 233,
+            "FP": 18,
+            "FN": 9,
+            "TP": 6
+          }
+        },
+        "optimal_youden": {
+          "threshold": 0.179246723651886,
+          "precision": 0.12149532710280374,
+          "recall_sensitivity": 0.8666666666666667,
+          "specificity": 0.6254980079681275,
+          "f1_score": 0.21311475409836064,
+          "confusion_matrix": {
+            "TN": 157,
+            "FP": 94,
+            "FN": 2,
+            "TP": 13
+          }
+        },
+        "optimal_f1": {
+          "threshold": 0.5006586909294128,
+          "max_f1_score": 0.3076923191547394
+        }
+      },
+      "test_metrics": {
+        "auroc": 0.7472118959107807,
+        "pr_auc": 0.21988921393706165,
+        "brier_score": 0.10887339951341932,
+        "default_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.19444444444444445,
+          "recall_sensitivity": 0.3181818181818182,
+          "specificity": 0.8921933085501859,
+          "f1_score": 0.2413793103448276,
+          "confusion_matrix": {
+            "TN": 240,
+            "FP": 29,
+            "FN": 15,
+            "TP": 7
+          }
+        },
+        "optimal_youden": {
+          "threshold": 0.22190478444099426,
+          "precision": 0.14782608695652175,
+          "recall_sensitivity": 0.7727272727272727,
+          "specificity": 0.6356877323420075,
+          "f1_score": 0.24817518248175183,
+          "confusion_matrix": {
+            "TN": 171,
+            "FP": 98,
+            "FN": 5,
+            "TP": 17
+          }
+        },
+        "optimal_f1": {
+          "threshold": 0.56028151512146,
+          "max_f1_score": 0.2978723347187042
+        }
+      },
+      "hyperparameter_search": [
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 3,
+            "learning_rate": 0.03,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8
+          },
+          "val_auroc": 0.7612217795484728,
+          "val_pr_auc": 0.14646351849380326,
+          "val_brier": 0.11936683882016703,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.47808764940239046,
+          "val_f1": 0.175
+        },
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 3,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8
+          },
+          "val_auroc": 0.7835325365205843,
+          "val_pr_auc": 0.1579266755944428,
+          "val_brier": 0.085616688807916,
+          "val_sensitivity": 0.8666666666666667,
+          "val_specificity": 0.6254980079681275,
+          "val_f1": 0.21311475409836064
+        },
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 4,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8
+          },
+          "val_auroc": 0.7771580345285525,
+          "val_pr_auc": 0.1407378851836208,
+          "val_brier": 0.07013686633737139,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.6175298804780877,
+          "val_f1": 0.224
+        },
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 4,
+            "learning_rate": 0.03,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8
+          },
+          "val_auroc": 0.7742363877822045,
+          "val_pr_auc": 0.13700434602907674,
+          "val_brier": 0.07445768495719829,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.6254980079681275,
+          "val_f1": 0.22764227642276422
+        },
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 4,
+            "learning_rate": 0.05,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0
+          },
+          "val_auroc": 0.7596281540504647,
+          "val_pr_auc": 0.14063530877607872,
+          "val_brier": 0.07486955965507368,
+          "val_sensitivity": 0.9333333333333333,
+          "val_specificity": 0.5139442231075697,
+          "val_f1": 0.18543046357615894
+        },
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 5,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8
+          },
+          "val_auroc": 0.7819389110225763,
+          "val_pr_auc": 0.14450126568518218,
+          "val_brier": 0.06097300090600233,
+          "val_sensitivity": 0.8666666666666667,
+          "val_specificity": 0.6653386454183267,
+          "val_f1": 0.23214285714285715
+        },
+        {
+          "model": "XGBoost (Weighted)",
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 4,
+            "learning_rate": 0.1,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8
+          },
+          "val_auroc": 0.7710491367861886,
+          "val_pr_auc": 0.15007353443982513,
+          "val_brier": 0.06669164672005332,
+          "val_sensitivity": 0.8666666666666667,
+          "val_specificity": 0.6135458167330677,
+          "val_f1": 0.208
+        }
+      ]
+    }
+  },
+  "best_candidate_model": {
+    "name": "Logistic Regression",
+    "artifact_path": "C:\\Users\\k7ris\\Documents\\SafePredict-XAI\\models\\best_mortality_model.joblib",
+    "selection_criterion": "Composite Validation Discrimination (AUROC + PR-AUC)",
+    "validation_performance": {
+      "auroc": 0.7893758300132802,
+      "pr_auc": 0.24310825699696265,
+      "brier_score": 0.19060260198709367,
+      "default_threshold_0_5": {
+        "threshold": 0.5,
+        "precision": 0.15254237288135594,
+        "recall_sensitivity": 0.6,
+        "specificity": 0.8007968127490039,
+        "f1_score": 0.24324324324324326,
+        "confusion_matrix": {
+          "TN": 201,
+          "FP": 50,
+          "FN": 6,
+          "TP": 9
+        }
+      },
+      "optimal_youden": {
+        "threshold": 0.4306234967539038,
+        "precision": 0.11965811965811966,
+        "recall_sensitivity": 0.9333333333333333,
+        "specificity": 0.5896414342629482,
+        "f1_score": 0.21212121212121213,
+        "confusion_matrix": {
+          "TN": 148,
+          "FP": 103,
+          "FN": 1,
+          "TP": 14
+        }
+      },
+      "optimal_f1": {
+        "threshold": 0.5811992099368446,
+        "max_f1_score": 0.3243243243243243
+      }
+    },
+    "test_performance": {
+      "auroc": 0.8499493071983778,
+      "pr_auc": 0.47970772501877806,
+      "brier_score": 0.19613556918541794,
+      "default_threshold_0_5": {
+        "threshold": 0.5,
+        "precision": 0.2,
+        "recall_sensitivity": 0.6818181818181818,
+        "specificity": 0.7769516728624535,
+        "f1_score": 0.30927835051546393,
+        "confusion_matrix": {
+          "TN": 209,
+          "FP": 60,
+          "FN": 7,
+          "TP": 15
+        }
+      },
+      "optimal_youden": {
+        "threshold": 0.4628814452754054,
+        "precision": 0.17699115044247787,
+        "recall_sensitivity": 0.9090909090909091,
+        "specificity": 0.654275092936803,
+        "f1_score": 0.2962962962962963,
+        "confusion_matrix": {
+          "TN": 176,
+          "FP": 93,
+          "FN": 2,
+          "TP": 20
+        }
+      },
+      "optimal_f1": {
+        "threshold": 0.6044664041518909,
+        "max_f1_score": 0.52
+      }
+    }
+  }
+}

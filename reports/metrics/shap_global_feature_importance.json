@@ -1,0 +1,984 @@
+{
+  "n_test_samples": 291,
+  "base_expected_value_log_odds": 0.3982958197593689,
+  "feature_importances": [
+    {
+      "feature": "Age (years)",
+      "mean_abs_shap": 0.5652709007263184,
+      "relative_importance_pct": 11.227039337158203,
+      "cumulative_importance_pct": 11.227039337158203
+    },
+    {
+      "feature": "BUN (Last)",
+      "mean_abs_shap": 0.3548654019832611,
+      "relative_importance_pct": 7.048103332519531,
+      "cumulative_importance_pct": 18.275142669677734
+    },
+    {
+      "feature": "Heart Rate (Mean)",
+      "mean_abs_shap": 0.23254519701004028,
+      "relative_importance_pct": 4.618659496307373,
+      "cumulative_importance_pct": 22.893802642822266
+    },
+    {
+      "feature": "Arterial pH (Count)",
+      "mean_abs_shap": 0.2294476479291916,
+      "relative_importance_pct": 4.557138442993164,
+      "cumulative_importance_pct": 27.45094108581543
+    },
+    {
+      "feature": "Admission Weight (kg)",
+      "mean_abs_shap": 0.17842881381511688,
+      "relative_importance_pct": 3.5438358783721924,
+      "cumulative_importance_pct": 30.99477767944336
+    },
+    {
+      "feature": "BUN (Mean)",
+      "mean_abs_shap": 0.1576264649629593,
+      "relative_importance_pct": 3.1306731700897217,
+      "cumulative_importance_pct": 34.125450134277344
+    },
+    {
+      "feature": "SaO2 (Std Dev)",
+      "mean_abs_shap": 0.150872141122818,
+      "relative_importance_pct": 2.996523380279541,
+      "cumulative_importance_pct": 37.12197494506836
+    },
+    {
+      "feature": "Heart Rate (Min)",
+      "mean_abs_shap": 0.14318624138832092,
+      "relative_importance_pct": 2.8438708782196045,
+      "cumulative_importance_pct": 39.96584701538086
+    },
+    {
+      "feature": "BUN (Max)",
+      "mean_abs_shap": 0.12855732440948486,
+      "relative_importance_pct": 2.553321123123169,
+      "cumulative_importance_pct": 42.519168853759766
+    },
+    {
+      "feature": "Respiration Rate (Count)",
+      "mean_abs_shap": 0.10931841284036636,
+      "relative_importance_pct": 2.171210289001465,
+      "cumulative_importance_pct": 44.69038009643555
+    },
+    {
+      "feature": "Bicarbonate (Last)",
+      "mean_abs_shap": 0.10058911889791489,
+      "relative_importance_pct": 1.9978350400924683,
+      "cumulative_importance_pct": 46.68821334838867
+    },
+    {
+      "feature": "Creatinine (First)",
+      "mean_abs_shap": 0.08952517807483673,
+      "relative_importance_pct": 1.778090238571167,
+      "cumulative_importance_pct": 48.466304779052734
+    },
+    {
+      "feature": "SaO2 (Count)",
+      "mean_abs_shap": 0.08747430890798569,
+      "relative_importance_pct": 1.7373571395874023,
+      "cumulative_importance_pct": 50.20366287231445
+    },
+    {
+      "feature": "Respiration Rate (Min)",
+      "mean_abs_shap": 0.07910055667161942,
+      "relative_importance_pct": 1.5710432529449463,
+      "cumulative_importance_pct": 51.77470779418945
+    },
+    {
+      "feature": "Arterial pH (Min)",
+      "mean_abs_shap": 0.0782056674361229,
+      "relative_importance_pct": 1.553269624710083,
+      "cumulative_importance_pct": 53.32797622680664
+    },
+    {
+      "feature": "Glucose (Last)",
+      "mean_abs_shap": 0.07476474344730377,
+      "relative_importance_pct": 1.4849281311035156,
+      "cumulative_importance_pct": 54.812904357910156
+    },
+    {
+      "feature": "Arterial pH (First)",
+      "mean_abs_shap": 0.07420263439416885,
+      "relative_importance_pct": 1.4737639427185059,
+      "cumulative_importance_pct": 56.28666687011719
+    },
+    {
+      "feature": "Heart Rate (Max)",
+      "mean_abs_shap": 0.07014725357294083,
+      "relative_importance_pct": 1.3932186365127563,
+      "cumulative_importance_pct": 57.67988586425781
+    },
+    {
+      "feature": "Glucose (Max)",
+      "mean_abs_shap": 0.07005699723958969,
+      "relative_importance_pct": 1.3914259672164917,
+      "cumulative_importance_pct": 59.071311950683594
+    },
+    {
+      "feature": "Total Lab Measurements",
+      "mean_abs_shap": 0.06780994683504105,
+      "relative_importance_pct": 1.3467965126037598,
+      "cumulative_importance_pct": 60.41810989379883
+    },
+    {
+      "feature": "Admit Source: Operating Room",
+      "mean_abs_shap": 0.05895063281059265,
+      "relative_importance_pct": 1.170838713645935,
+      "cumulative_importance_pct": 61.58894729614258
+    },
+    {
+      "feature": "Sodium (First)",
+      "mean_abs_shap": 0.0556686632335186,
+      "relative_importance_pct": 1.1056544780731201,
+      "cumulative_importance_pct": 62.694602966308594
+    },
+    {
+      "feature": "Admission Height (cm)",
+      "mean_abs_shap": 0.051724884659051895,
+      "relative_importance_pct": 1.0273256301879883,
+      "cumulative_importance_pct": 63.721927642822266
+    },
+    {
+      "feature": "Lactate (Last)",
+      "mean_abs_shap": 0.045367877930402756,
+      "relative_importance_pct": 0.9010669589042664,
+      "cumulative_importance_pct": 64.62299346923828
+    },
+    {
+      "feature": "Hemoglobin (Mean)",
+      "mean_abs_shap": 0.044797174632549286,
+      "relative_importance_pct": 0.8897320628166199,
+      "cumulative_importance_pct": 65.51272583007812
+    },
+    {
+      "feature": "SaO2 (Mean)",
+      "mean_abs_shap": 0.04446958377957344,
+      "relative_importance_pct": 0.8832256197929382,
+      "cumulative_importance_pct": 66.39595031738281
+    },
+    {
+      "feature": "Calcium (Mean)",
+      "mean_abs_shap": 0.044221289455890656,
+      "relative_importance_pct": 0.8782941699028015,
+      "cumulative_importance_pct": 67.27424621582031
+    },
+    {
+      "feature": "Hemoglobin (Max)",
+      "mean_abs_shap": 0.04405594617128372,
+      "relative_importance_pct": 0.8750102519989014,
+      "cumulative_importance_pct": 68.14925384521484
+    },
+    {
+      "feature": "Respiration Rate (Std Dev)",
+      "mean_abs_shap": 0.04371217265725136,
+      "relative_importance_pct": 0.8681824207305908,
+      "cumulative_importance_pct": 69.0174331665039
+    },
+    {
+      "feature": "Platelets (Min)",
+      "mean_abs_shap": 0.04259362071752548,
+      "relative_importance_pct": 0.8459664583206177,
+      "cumulative_importance_pct": 69.8634033203125
+    },
+    {
+      "feature": "Platelets (Mean)",
+      "mean_abs_shap": 0.04125141352415085,
+      "relative_importance_pct": 0.8193085193634033,
+      "cumulative_importance_pct": 70.68270874023438
+    },
+    {
+      "feature": "Potassium (Min)",
+      "mean_abs_shap": 0.038186196237802505,
+      "relative_importance_pct": 0.7584291100502014,
+      "cumulative_importance_pct": 71.4411392211914
+    },
+    {
+      "feature": "Missing Feature Count",
+      "mean_abs_shap": 0.03796827420592308,
+      "relative_importance_pct": 0.7541008591651917,
+      "cumulative_importance_pct": 72.19524383544922
+    },
+    {
+      "feature": "Sodium (Min)",
+      "mean_abs_shap": 0.03721169754862785,
+      "relative_importance_pct": 0.7390742897987366,
+      "cumulative_importance_pct": 72.93431854248047
+    },
+    {
+      "feature": "Magnesium (Last)",
+      "mean_abs_shap": 0.036520399153232574,
+      "relative_importance_pct": 0.7253441214561462,
+      "cumulative_importance_pct": 73.65966033935547
+    },
+    {
+      "feature": "Available Lab Types Count",
+      "mean_abs_shap": 0.03549139201641083,
+      "relative_importance_pct": 0.704906702041626,
+      "cumulative_importance_pct": 74.36457061767578
+    },
+    {
+      "feature": "Platelets (Max)",
+      "mean_abs_shap": 0.0344647616147995,
+      "relative_importance_pct": 0.684516429901123,
+      "cumulative_importance_pct": 75.04908752441406
+    },
+    {
+      "feature": "Creatinine (Last)",
+      "mean_abs_shap": 0.03443462774157524,
+      "relative_importance_pct": 0.6839179396629333,
+      "cumulative_importance_pct": 75.73300170898438
+    },
+    {
+      "feature": "Hematocrit (Last)",
+      "mean_abs_shap": 0.03365856036543846,
+      "relative_importance_pct": 0.6685041785240173,
+      "cumulative_importance_pct": 76.40150451660156
+    },
+    {
+      "feature": "Ethnicity: African American",
+      "mean_abs_shap": 0.03238076716661453,
+      "relative_importance_pct": 0.6431254744529724,
+      "cumulative_importance_pct": 77.04463195800781
+    },
+    {
+      "feature": "SaO2 (Min)",
+      "mean_abs_shap": 0.03149595484137535,
+      "relative_importance_pct": 0.6255519390106201,
+      "cumulative_importance_pct": 77.67018127441406
+    },
+    {
+      "feature": "Lactate (Min)",
+      "mean_abs_shap": 0.030409734696149826,
+      "relative_importance_pct": 0.603978157043457,
+      "cumulative_importance_pct": 78.27416229248047
+    },
+    {
+      "feature": "Respiration Rate (Mean)",
+      "mean_abs_shap": 0.03036334179341793,
+      "relative_importance_pct": 0.6030567288398743,
+      "cumulative_importance_pct": 78.8772201538086
+    },
+    {
+      "feature": "Sodium (Mean)",
+      "mean_abs_shap": 0.029975347220897675,
+      "relative_importance_pct": 0.5953506827354431,
+      "cumulative_importance_pct": 79.47257232666016
+    },
+    {
+      "feature": "Heart Rate (Count)",
+      "mean_abs_shap": 0.02993958629667759,
+      "relative_importance_pct": 0.5946403741836548,
+      "cumulative_importance_pct": 80.06721496582031
+    },
+    {
+      "feature": "Available Vital Types Count",
+      "mean_abs_shap": 0.029894931241869926,
+      "relative_importance_pct": 0.593753457069397,
+      "cumulative_importance_pct": 80.66096496582031
+    },
+    {
+      "feature": "Glucose (First)",
+      "mean_abs_shap": 0.02861025556921959,
+      "relative_importance_pct": 0.5682380795478821,
+      "cumulative_importance_pct": 81.22920227050781
+    },
+    {
+      "feature": "Lactate (Max)",
+      "mean_abs_shap": 0.02750004082918167,
+      "relative_importance_pct": 0.546187698841095,
+      "cumulative_importance_pct": 81.775390625
+    },
+    {
+      "feature": "Magnesium (Mean)",
+      "mean_abs_shap": 0.02747100032866001,
+      "relative_importance_pct": 0.5456109642982483,
+      "cumulative_importance_pct": 82.32099914550781
+    },
+    {
+      "feature": "Calcium (Last)",
+      "mean_abs_shap": 0.02702343463897705,
+      "relative_importance_pct": 0.5367217063903809,
+      "cumulative_importance_pct": 82.85771942138672
+    },
+    {
+      "feature": "WBC (First)",
+      "mean_abs_shap": 0.027013521641492844,
+      "relative_importance_pct": 0.536524772644043,
+      "cumulative_importance_pct": 83.39424133300781
+    },
+    {
+      "feature": "Platelets (First)",
+      "mean_abs_shap": 0.0256748478859663,
+      "relative_importance_pct": 0.5099369883537292,
+      "cumulative_importance_pct": 83.9041748046875
+    },
+    {
+      "feature": "Arterial pH (Last)",
+      "mean_abs_shap": 0.024933867156505585,
+      "relative_importance_pct": 0.4952200651168823,
+      "cumulative_importance_pct": 84.3993911743164
+    },
+    {
+      "feature": "Creatinine (Mean)",
+      "mean_abs_shap": 0.024801921099424362,
+      "relative_importance_pct": 0.4925994575023651,
+      "cumulative_importance_pct": 84.8919906616211
+    },
+    {
+      "feature": "Creatinine (Min)",
+      "mean_abs_shap": 0.023927053436636925,
+      "relative_importance_pct": 0.4752234220504761,
+      "cumulative_importance_pct": 85.3672103881836
+    },
+    {
+      "feature": "Bicarbonate (Mean)",
+      "mean_abs_shap": 0.02369208261370659,
+      "relative_importance_pct": 0.4705565571784973,
+      "cumulative_importance_pct": 85.8377685546875
+    },
+    {
+      "feature": "Potassium (First)",
+      "mean_abs_shap": 0.023513348773121834,
+      "relative_importance_pct": 0.4670066833496094,
+      "cumulative_importance_pct": 86.30477905273438
+    },
+    {
+      "feature": "Magnesium (Max)",
+      "mean_abs_shap": 0.023276960477232933,
+      "relative_importance_pct": 0.46231168508529663,
+      "cumulative_importance_pct": 86.76708984375
+    },
+    {
+      "feature": "Hematocrit (Max)",
+      "mean_abs_shap": 0.022992903366684914,
+      "relative_importance_pct": 0.4566699266433716,
+      "cumulative_importance_pct": 87.22376251220703
+    },
+    {
+      "feature": "SaO2 (Max)",
+      "mean_abs_shap": 0.022965237498283386,
+      "relative_importance_pct": 0.45612043142318726,
+      "cumulative_importance_pct": 87.67988586425781
+    },
+    {
+      "feature": "Potassium (Mean)",
+      "mean_abs_shap": 0.022468144074082375,
+      "relative_importance_pct": 0.44624748826026917,
+      "cumulative_importance_pct": 88.12613677978516
+    },
+    {
+      "feature": "Heart Rate (Std Dev)",
+      "mean_abs_shap": 0.022103210911154747,
+      "relative_importance_pct": 0.4389994442462921,
+      "cumulative_importance_pct": 88.56513977050781
+    },
+    {
+      "feature": "Sodium (Count)",
+      "mean_abs_shap": 0.021419746801257133,
+      "relative_importance_pct": 0.4254249334335327,
+      "cumulative_importance_pct": 88.99056243896484
+    },
+    {
+      "feature": "Bicarbonate (Max)",
+      "mean_abs_shap": 0.021250642836093903,
+      "relative_importance_pct": 0.4220663011074066,
+      "cumulative_importance_pct": 89.41262817382812
+    },
+    {
+      "feature": "Respiration Rate (Max)",
+      "mean_abs_shap": 0.02092033624649048,
+      "relative_importance_pct": 0.415505975484848,
+      "cumulative_importance_pct": 89.82813262939453
+    },
+    {
+      "feature": "WBC (Max)",
+      "mean_abs_shap": 0.020538635551929474,
+      "relative_importance_pct": 0.4079248905181885,
+      "cumulative_importance_pct": 90.2360610961914
+    },
+    {
+      "feature": "Sodium (Max)",
+      "mean_abs_shap": 0.020241688936948776,
+      "relative_importance_pct": 0.4020271301269531,
+      "cumulative_importance_pct": 90.63809204101562
+    },
+    {
+      "feature": "Arterial pH (Max)",
+      "mean_abs_shap": 0.0194284375756979,
+      "relative_importance_pct": 0.38587486743927,
+      "cumulative_importance_pct": 91.02396392822266
+    },
+    {
+      "feature": "Chloride (Mean)",
+      "mean_abs_shap": 0.019363421946763992,
+      "relative_importance_pct": 0.38458356261253357,
+      "cumulative_importance_pct": 91.4085464477539
+    },
+    {
+      "feature": "Calcium (First)",
+      "mean_abs_shap": 0.01715662144124508,
+      "relative_importance_pct": 0.3407535254955292,
+      "cumulative_importance_pct": 91.74929809570312
+    },
+    {
+      "feature": "Sodium (Last)",
+      "mean_abs_shap": 0.01600038632750511,
+      "relative_importance_pct": 0.31778913736343384,
+      "cumulative_importance_pct": 92.06708526611328
+    },
+    {
+      "feature": "Lactate (Mean)",
+      "mean_abs_shap": 0.01558516826480627,
+      "relative_importance_pct": 0.30954235792160034,
+      "cumulative_importance_pct": 92.37662506103516
+    },
+    {
+      "feature": "Calcium (Max)",
+      "mean_abs_shap": 0.015306897461414337,
+      "relative_importance_pct": 0.30401554703712463,
+      "cumulative_importance_pct": 92.6806411743164
+    },
+    {
+      "feature": "Calcium (Min)",
+      "mean_abs_shap": 0.015085105784237385,
+      "relative_importance_pct": 0.2996104657649994,
+      "cumulative_importance_pct": 92.98025512695312
+    },
+    {
+      "feature": "Magnesium (Count)",
+      "mean_abs_shap": 0.015060312114655972,
+      "relative_importance_pct": 0.2991180121898651,
+      "cumulative_importance_pct": 93.27937316894531
+    },
+    {
+      "feature": "Hematocrit (Mean)",
+      "mean_abs_shap": 0.014739865437150002,
+      "relative_importance_pct": 0.29275351762771606,
+      "cumulative_importance_pct": 93.57212829589844
+    },
+    {
+      "feature": "Hemoglobin (Min)",
+      "mean_abs_shap": 0.014714817516505718,
+      "relative_importance_pct": 0.29225602746009827,
+      "cumulative_importance_pct": 93.86438751220703
+    },
+    {
+      "feature": "Temperature (Std Dev)",
+      "mean_abs_shap": 0.01415866706520319,
+      "relative_importance_pct": 0.28121012449264526,
+      "cumulative_importance_pct": 94.14559936523438
+    },
+    {
+      "feature": "Hematocrit (First)",
+      "mean_abs_shap": 0.013616686686873436,
+      "relative_importance_pct": 0.27044567465782166,
+      "cumulative_importance_pct": 94.41604614257812
+    },
+    {
+      "feature": "Diastolic BP (Mean)",
+      "mean_abs_shap": 0.013486269861459732,
+      "relative_importance_pct": 0.2678554356098175,
+      "cumulative_importance_pct": 94.68389892578125
+    },
+    {
+      "feature": "Total Vital Measurements",
+      "mean_abs_shap": 0.013211771845817566,
+      "relative_importance_pct": 0.26240354776382446,
+      "cumulative_importance_pct": 94.94630432128906
+    },
+    {
+      "feature": "Potassium (Max)",
+      "mean_abs_shap": 0.01262535247951746,
+      "relative_importance_pct": 0.2507564425468445,
+      "cumulative_importance_pct": 95.19705963134766
+    },
+    {
+      "feature": "Hemoglobin (Last)",
+      "mean_abs_shap": 0.01113769318908453,
+      "relative_importance_pct": 0.22120952606201172,
+      "cumulative_importance_pct": 95.41826629638672
+    },
+    {
+      "feature": "Hematocrit (Min)",
+      "mean_abs_shap": 0.010899733752012253,
+      "relative_importance_pct": 0.21648335456848145,
+      "cumulative_importance_pct": 95.63475036621094
+    },
+    {
+      "feature": "Diastolic BP (Min)",
+      "mean_abs_shap": 0.010865981690585613,
+      "relative_importance_pct": 0.21581298112869263,
+      "cumulative_importance_pct": 95.8505630493164
+    },
+    {
+      "feature": "WBC (Mean)",
+      "mean_abs_shap": 0.010448564775288105,
+      "relative_importance_pct": 0.20752254128456116,
+      "cumulative_importance_pct": 96.0580825805664
+    },
+    {
+      "feature": "Unit: Neuro ICU",
+      "mean_abs_shap": 0.009497146122157574,
+      "relative_importance_pct": 0.18862606585025787,
+      "cumulative_importance_pct": 96.24671173095703
+    },
+    {
+      "feature": "Bicarbonate (First)",
+      "mean_abs_shap": 0.009299876168370247,
+      "relative_importance_pct": 0.18470802903175354,
+      "cumulative_importance_pct": 96.4314193725586
+    },
+    {
+      "feature": "Temperature (Min)",
+      "mean_abs_shap": 0.008966602385044098,
+      "relative_importance_pct": 0.17808875441551208,
+      "cumulative_importance_pct": 96.60950469970703
+    },
+    {
+      "feature": "Hemoglobin (First)",
+      "mean_abs_shap": 0.00848989188671112,
+      "relative_importance_pct": 0.16862066090106964,
+      "cumulative_importance_pct": 96.77812194824219
+    },
+    {
+      "feature": "BUN (First)",
+      "mean_abs_shap": 0.008438043296337128,
+      "relative_importance_pct": 0.16759087145328522,
+      "cumulative_importance_pct": 96.94570922851562
+    },
+    {
+      "feature": "Temperature (Mean)",
+      "mean_abs_shap": 0.008405773900449276,
+      "relative_importance_pct": 0.16694995760917664,
+      "cumulative_importance_pct": 97.11265563964844
+    },
+    {
+      "feature": "Bicarbonate (Count)",
+      "mean_abs_shap": 0.008357820101082325,
+      "relative_importance_pct": 0.16599752008914948,
+      "cumulative_importance_pct": 97.27865600585938
+    },
+    {
+      "feature": "Chloride (Max)",
+      "mean_abs_shap": 0.008094270713627338,
+      "relative_importance_pct": 0.16076308488845825,
+      "cumulative_importance_pct": 97.43942260742188
+    },
+    {
+      "feature": "BUN (Min)",
+      "mean_abs_shap": 0.008046820759773254,
+      "relative_importance_pct": 0.15982066094875336,
+      "cumulative_importance_pct": 97.5992431640625
+    },
+    {
+      "feature": "Systolic BP (Count)",
+      "mean_abs_shap": 0.007946795783936977,
+      "relative_importance_pct": 0.1578340232372284,
+      "cumulative_importance_pct": 97.757080078125
+    },
+    {
+      "feature": "Admit Source: Emergency Department",
+      "mean_abs_shap": 0.00793932843953371,
+      "relative_importance_pct": 0.15768571197986603,
+      "cumulative_importance_pct": 97.91476440429688
+    },
+    {
+      "feature": "Unit: Med-Surg ICU",
+      "mean_abs_shap": 0.007796925958245993,
+      "relative_importance_pct": 0.15485741198062897,
+      "cumulative_importance_pct": 98.06961822509766
+    },
+    {
+      "feature": "Magnesium (Min)",
+      "mean_abs_shap": 0.007699470967054367,
+      "relative_importance_pct": 0.15292182564735413,
+      "cumulative_importance_pct": 98.22254180908203
+    },
+    {
+      "feature": "Chloride (Last)",
+      "mean_abs_shap": 0.007696928456425667,
+      "relative_importance_pct": 0.15287132561206818,
+      "cumulative_importance_pct": 98.37541198730469
+    },
+    {
+      "feature": "Glucose (Min)",
+      "mean_abs_shap": 0.007385801989585161,
+      "relative_importance_pct": 0.1466919481754303,
+      "cumulative_importance_pct": 98.52210235595703
+    },
+    {
+      "feature": "Creatinine (Max)",
+      "mean_abs_shap": 0.006996213924139738,
+      "relative_importance_pct": 0.13895420730113983,
+      "cumulative_importance_pct": 98.66105651855469
+    },
+    {
+      "feature": "Systolic BP (Min)",
+      "mean_abs_shap": 0.006811634171754122,
+      "relative_importance_pct": 0.13528820872306824,
+      "cumulative_importance_pct": 98.79634094238281
+    },
+    {
+      "feature": "Platelets (Last)",
+      "mean_abs_shap": 0.006124894600361586,
+      "relative_importance_pct": 0.1216486319899559,
+      "cumulative_importance_pct": 98.9179916381836
+    },
+    {
+      "feature": "Lactate (First)",
+      "mean_abs_shap": 0.005272781942039728,
+      "relative_importance_pct": 0.10472452640533447,
+      "cumulative_importance_pct": 99.02271270751953
+    },
+    {
+      "feature": "Glucose (Mean)",
+      "mean_abs_shap": 0.005112261511385441,
+      "relative_importance_pct": 0.10153637081384659,
+      "cumulative_importance_pct": 99.12425231933594
+    },
+    {
+      "feature": "Hematocrit (Count)",
+      "mean_abs_shap": 0.004565565846860409,
+      "relative_importance_pct": 0.09067826718091965,
+      "cumulative_importance_pct": 99.21492767333984
+    },
+    {
+      "feature": "WBC (Min)",
+      "mean_abs_shap": 0.004266915377229452,
+      "relative_importance_pct": 0.08474666625261307,
+      "cumulative_importance_pct": 99.29967498779297
+    },
+    {
+      "feature": "Chloride (First)",
+      "mean_abs_shap": 0.004209856037050486,
+      "relative_importance_pct": 0.08361338824033737,
+      "cumulative_importance_pct": 99.38328552246094
+    },
+    {
+      "feature": "Bicarbonate (Min)",
+      "mean_abs_shap": 0.004093691240996122,
+      "relative_importance_pct": 0.08130620419979095,
+      "cumulative_importance_pct": 99.46459197998047
+    },
+    {
+      "feature": "Mean Arterial Pressure (Min)",
+      "mean_abs_shap": 0.004000045824795961,
+      "relative_importance_pct": 0.07944627851247787,
+      "cumulative_importance_pct": 99.54403686523438
+    },
+    {
+      "feature": "Gender: Male",
+      "mean_abs_shap": 0.0037660852540284395,
+      "relative_importance_pct": 0.07479950785636902,
+      "cumulative_importance_pct": 99.61883544921875
+    },
+    {
+      "feature": "Ethnicity: Other/Unknown",
+      "mean_abs_shap": 0.0034868004731833935,
+      "relative_importance_pct": 0.06925253570079803,
+      "cumulative_importance_pct": 99.6880874633789
+    },
+    {
+      "feature": "Admit Source: Step-Down Unit (SDU)",
+      "mean_abs_shap": 0.002647269517183304,
+      "relative_importance_pct": 0.05257833003997803,
+      "cumulative_importance_pct": 99.74066925048828
+    },
+    {
+      "feature": "WBC (Last)",
+      "mean_abs_shap": 0.002539531560614705,
+      "relative_importance_pct": 0.05043850466609001,
+      "cumulative_importance_pct": 99.79110717773438
+    },
+    {
+      "feature": "Gender: Unknown",
+      "mean_abs_shap": 0.0018071394879370928,
+      "relative_importance_pct": 0.035892218351364136,
+      "cumulative_importance_pct": 99.82699584960938
+    },
+    {
+      "feature": "Mean Arterial Pressure (Mean)",
+      "mean_abs_shap": 0.0017892764881253242,
+      "relative_importance_pct": 0.03553743287920952,
+      "cumulative_importance_pct": 99.86253356933594
+    },
+    {
+      "feature": "Diastolic BP (Count)",
+      "mean_abs_shap": 0.0017482087714597583,
+      "relative_importance_pct": 0.034721773117780685,
+      "cumulative_importance_pct": 99.89725494384766
+    },
+    {
+      "feature": "Diastolic BP (Std Dev)",
+      "mean_abs_shap": 0.0017270459793508053,
+      "relative_importance_pct": 0.034301452338695526,
+      "cumulative_importance_pct": 99.93155670166016
+    },
+    {
+      "feature": "Potassium (Count)",
+      "mean_abs_shap": 0.0011987349716946483,
+      "relative_importance_pct": 0.023808486759662628,
+      "cumulative_importance_pct": 99.95536804199219
+    },
+    {
+      "feature": "Systolic BP (Max)",
+      "mean_abs_shap": 0.0011487914016470313,
+      "relative_importance_pct": 0.02281654067337513,
+      "cumulative_importance_pct": 99.97818756103516
+    },
+    {
+      "feature": "Arterial pH (Mean)",
+      "mean_abs_shap": 0.0008367098052985966,
+      "relative_importance_pct": 0.01661817915737629,
+      "cumulative_importance_pct": 99.99480438232422
+    },
+    {
+      "feature": "Systolic BP (Std Dev)",
+      "mean_abs_shap": 0.0002609981456771493,
+      "relative_importance_pct": 0.005183773580938578,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Diastolic BP (Max)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Temperature (Max)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Systolic BP (Mean)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Temperature (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Age > 89 flag",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Mean Arterial Pressure (Std Dev)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Mean Arterial Pressure (Max)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Potassium (Last)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Platelets (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "WBC (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Glucose (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Hemoglobin (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Creatinine (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Mean Arterial Pressure (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "BUN (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Chloride (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Lactate (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Chloride (Min)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Calcium (Count)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Magnesium (First)",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Ethnicity: Asian",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Ethnicity: Caucasian",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Ethnicity: Hispanic",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Gender: Female",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Unit: CTICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Unit: CSICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Unit: CCU-CTICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Ethnicity: Unknown",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Ethnicity: Native American",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Unit: SICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Unit: Cardiac ICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Unit: MICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Direct Admit",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Acute Care/Floor",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Other Hospital",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Floor",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Other ICU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: PACU",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Recovery Room",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    },
+    {
+      "feature": "Admit Source: Unknown",
+      "mean_abs_shap": 0.0,
+      "relative_importance_pct": 0.0,
+      "cumulative_importance_pct": 99.99998474121094
+    }
+  ]
+}
