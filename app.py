@@ -167,13 +167,36 @@ def load_all():
     data = {}
 
     # ── JSON metrics ──────────────────────────────────────────────────────────
-    data["cohort_flow"]   = json.load(open(ROOT / "reports/metrics/cohort_flow_metrics.json"))
-    data["eval_metrics"]  = json.load(open(ROOT / "reports/metrics/final_model_evaluation_metrics.json"))
-    data["val_metrics"]   = json.load(open(ROOT / "reports/metrics/validation_metrics.json"))
-    data["sp_results"]    = json.load(open(ROOT / "reports/metrics/safepredict_results.json"))
-    data["shap_global"]   = json.load(open(ROOT / "reports/metrics/shap_global_feature_importance.json"))
+    _json_files = {
+        "cohort_flow":  ROOT / "reports/metrics/cohort_flow_metrics.json",
+        "eval_metrics": ROOT / "reports/metrics/final_model_evaluation_metrics.json",
+        "val_metrics":  ROOT / "reports/metrics/validation_metrics.json",
+        "sp_results":   ROOT / "reports/metrics/safepredict_results.json",
+        "shap_global":  ROOT / "reports/metrics/shap_global_feature_importance.json",
+    }
+    for key, path in _json_files.items():
+        if not path.exists():
+            st.error(
+                f"**Missing artifact:** `{path.relative_to(ROOT)}`\n\n"
+                "This file must be committed to the repository for the dashboard to work. "
+                "Run the full pipeline locally and commit all files in `reports/metrics/`."
+            )
+            st.stop()
+        with open(path, encoding="utf-8") as f:
+            data[key] = json.load(f)
 
     # ── Parquet data ─────────────────────────────────────────────────────────
+    for key, rel in [
+        ("model_df",   "data/processed/model_data.parquet"),
+        ("patient_df", "data/processed/cohort_patient.parquet"),
+    ]:
+        path = ROOT / rel
+        if not path.exists():
+            st.error(
+                f"**Missing artifact:** `{rel}`\n\n"
+                "Commit this parquet file to the repository (check `.gitignore` exceptions)."
+            )
+            st.stop()
     data["model_df"]   = pl.read_parquet(ROOT / "data/processed/model_data.parquet").to_pandas()
     data["patient_df"] = pl.read_parquet(ROOT / "data/processed/cohort_patient.parquet").to_pandas()
 
